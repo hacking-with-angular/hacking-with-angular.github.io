@@ -10,24 +10,26 @@
 
     <!--Description-->
     
-        <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+        <meta name="description" content="分享你需要的和喜欢的文章">
     
 
     <!--Author-->
     
-        <meta name="author" content="John Doe">
+        <meta name="author" content="iAngular">
     
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hello World"/>
+        <meta property="og:title" content="开始我们的Angular2之旅"/>
     
 
     <!--Open Graph Description-->
     
+        <meta property="og:description" content="分享你需要的和喜欢的文章" />
+    
 
     <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:site_name" content="HACKING WITH ANGULAR"/>
 
     <!--Type page-->
     
@@ -42,7 +44,10 @@
 
     <!-- Title -->
     
-    <title>Hello World - Hexo</title>
+    <title>开始我们的Angular2之旅 - HACKING WITH ANGULAR</title>
+
+    <!-- # add favicon -->
+    <link rel="icon" href="/favicon.ico" />
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -51,19 +56,25 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+    <!--[if lt IE 9]>-->
     <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/html5shiv.js"></script>-->
     <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/respond.min.js"></script>-->
+    <!--[endif]-->
 
     <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="https://rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />-->
 
     <!-- Google Analytics -->
     
@@ -86,7 +97,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Configurable Title</a>
+            <a class="navbar-brand" href="/">iAngular</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -110,7 +121,15 @@
                     </li>
                 
                     <li>
-                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/hacking-with-angular">
                             
                                 <i class="fa fa-github fa-stack-2x"></i>
                             
@@ -128,12 +147,12 @@
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('/images/piano-player.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Hello World</h1>
+                    <h1>开始我们的Angular2之旅</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -152,22 +171,36 @@
         <div class="row">
 
             <!-- Tags and categories -->
-           
+            
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                
+
+
+<a href="/tags/Angular2/">#Angular2</a>
+
+
+                
+            </div>
+            <div class="col-lg-4 col-md-5 post-categories">
+                
+            </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <p>我们准备在这里发布一系列的文章来讲解如何一步步的学习还有使用<code>Angular2</code></p>
+<p>当然在你准备开始的时候,我们有一些能够帮助你更好的理解和掌握<code>Angular2</code>的建议:</p>
+<ul>
+<li><code>Angular2</code>的<a href="https://angular.io/" target="_blank" rel="external">官网</a>,<a href="https://angular.cn/" target="_blank" rel="external">中文网址</a></li>
+<li>如果你之前学习过<code>Angular1</code>或者使用过<code>Angular1</code>将会对你学习<code>Angular2</code>大有好处,当然没有也没关系</li>
+<li>建议你多了解一下<code>TypeScript</code>,因为我们的这些文章都是基于<code>TypeScript</code>的</li>
+<li>建议你多了解一下<code>ES6</code>,因为这是<code>JavaScript</code>的下一个版本</li>
+</ul>
+<p>我们这些系列文章会先从基本开始,一步一步的带领大家进入这个新天地;刚开始的时候我们不要太纠结是用什么构建工具,打包工具;还有构建的流程,先把基础学好.后面的部分我们就可以再好好探讨哪些内容.</p>
 
 
                 
@@ -175,11 +208,14 @@
 
             <!-- Comments -->
             
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- #添加多说评论 -->
 
 
-                </div>
+
+
+
+            </div>
             
         </div>
     </div>
@@ -200,7 +236,7 @@
 
                     
                         <li>
-                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                            <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -226,13 +262,19 @@
     <!-- After footer scripts -->
     
 <!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="//cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>-->
 
 <!-- Bootstrap -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/bootstrap.min.js"></script>-->
 
 <!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
 
 <!-- Disqus Comments -->
 
