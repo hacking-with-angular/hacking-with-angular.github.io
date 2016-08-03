@@ -73,7 +73,7 @@
     <!--[endif]-->
 
     <!-- Gallery -->
-    <link href="https://rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
     <!--<link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />-->
 
     <!-- Google Analytics -->
@@ -169,6 +169,14 @@
 <article>
     <div class="container">
         <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p id="busuanzi_container_page_pv" style="font-size: 20px; color: #337ab7; text-align: center;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span id="busuanzi_value_page_pv"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
 
             <!-- Tags and categories -->
             
@@ -195,10 +203,10 @@
                 <p>在这一章节中,我们来学习如何使用Angular2来展示数据,以及如何使用它的内置指令<code>NgFor</code>和<code>NgIf</code></p>
 <p>首先要确保你有一个可以运行起来的Angular2的样例程序,最好就是我们上一章节中完成的那个<a href="https://github.com/hacking-with-angular/angular2-travel/tree/quickstart" target="_blank" rel="external">QuickStart</a>小项目或者你自己根据<a href="https://angular.cn/docs/ts/latest/quickstart.html" target="_blank" rel="external">官网</a>上面的步骤完成的QuickStart小项目,因为我们的讲解都是在那个基础上来进行的;然后让我们开始下面的快乐旅程吧.</p>
 <p>因为我们的这一系列的文章都是使用的<code>TypeScript</code>所以在看下面的内容之前你最好可以看一下TypeScript或者ES6的类,它们的网址分别是<a href="http://dreamapple.leanapp.cn/gitbook/typescript/doc/handbook/Classes.html" target="_blank" rel="external">TypeScript</a>,<a href="http://es6.ruanyifeng.com/#docs/class" target="_blank" rel="external">ES6</a>;如果以前你学过<code>Java</code>或者<code>C++</code>这种类似的面向对象的语言的话,那么学习这里的类就很轻松了;这里面的类基本上和那些语言中的类是相似的.</p>
-<p>上一节中我们在<code>app.component.ts</code>中导出了一个空的类,那么下面我们就要开始使填充它,让它变得丰满起来.首先我们给这个<code>AppComponent</code>类(组件)添加三个属性,分别是<code>name</code>,<code>age</code>,<code>fruit</code>;就像下面这样:</p>
+<p>上一节中我们在<code>app.component.ts</code>中导出了一个空的类,那么下面我们就要开始填充它,让它变得丰满起来.首先我们给这个<code>AppComponent</code>类(组件)添加三个属性,分别是<code>name</code>,<code>age</code>,<code>fruit</code>;就像下面这样:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppComponent</span> </span>&#123;</div><div class="line">    username = <span class="string">'dreamapple'</span>;</div><div class="line">    age = <span class="number">22</span>;</div><div class="line">    fruit = <span class="string">'apple'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>上面的写法其实只是一种简写的形式,实际上完整的写法应该是这样的:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppComponent</span> </span>&#123;</div><div class="line">    <span class="comment">//username = 'dreamapple';</span></div><div class="line">    <span class="comment">//age = 22;</span></div><div class="line">    <span class="comment">//fruit = 'apple'</span></div><div class="line">    username: string;</div><div class="line">    age: number;</div><div class="line">    fruit: string;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>() &#123;</div><div class="line">        <span class="keyword">this</span>.username = <span class="string">'dreamapple'</span>;</div><div class="line">        <span class="keyword">this</span>.age = <span class="number">22</span>;</div><div class="line">        <span class="keyword">this</span>.fruit = <span class="string">'apple'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后我们要修改我们的模板了,因为我们在模板中要使用较多的HTML,所以我们要使用反引号来包裹住我们我们的HTML片段;我们的装饰器函数如下所示:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    template:<span class="string">`</span></div><div class="line">        &lt;p&gt;My name is: &#123;&#123;username&#125;&#125;&lt;/p&gt;</div><div class="line">        &lt;p&gt;My age is: &#123;&#123;age&#125;&#125;&lt;/p&gt;</div><div class="line">        &lt;p&gt;My favorite fruit is: &#123;&#123;fruit&#125;&#125;&lt;/p&gt;</div><div class="line">    `</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>然后我们要修改我们的模板了,因为我们在模板中要使用较多的HTML,所以我们要使用反引号来包裹住我们的HTML片段;我们的装饰器函数如下所示:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    template:<span class="string">`</span></div><div class="line">        &lt;p&gt;My name is: &#123;&#123;username&#125;&#125;&lt;/p&gt;</div><div class="line">        &lt;p&gt;My age is: &#123;&#123;age&#125;&#125;&lt;/p&gt;</div><div class="line">        &lt;p&gt;My favorite fruit is: &#123;&#123;fruit&#125;&#125;&lt;/p&gt;</div><div class="line">    `</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>当然我们也可以使用装饰器函数中元数据对象的<code>templateUrl</code>配置选项,如下所示:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template:`</span></div><div class="line">    <span class="comment">//    &lt;p&gt;My name is: &#123;&#123;username&#125;&#125;&lt;/p&gt;</span></div><div class="line">    <span class="comment">//    &lt;p&gt;My age is: &#123;&#123;age&#125;&#125;&lt;/p&gt;</span></div><div class="line">    <span class="comment">//    &lt;p&gt;My favorite fruit is: &#123;&#123;fruit&#125;&#125;&lt;/p&gt;</span></div><div class="line">    <span class="comment">//`,</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app-template.html'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 <p>其中<code>app/templates/app-template.html</code>表示的是程序的根目录<code>app</code>(而不是<code>angular2-travel</code>)下的<code>templates</code>文件夹下的<code>app-template.html</code>文件,然后将我们之前写的HTML片段复制过去就好了.</p>
 <p>从上面的过程中,我们可以看到<code>Angular2</code>显示数据依然使用的是<code>Angular1</code>惯用的双大括号;它作为一个插值符号,在这个插值符号出现的地方就是我们要显示的数据的地方.接下来我们要学习使用<code>NgFor</code>这个内置指令了,熟悉<code>Angular1</code>的同学应该很容易就上手这个指令,因为<code>NgFor</code>和<code>ng-repeat</code>基本是一样的;它用来循环一个可迭代的对象,一般情况下会是一个数组.</p>
@@ -237,7 +245,7 @@
 </article>
 
     <!-- Footer -->
-    <hr />
+    <hr/>
 
 <!-- Footer -->
 <footer>
@@ -250,14 +258,14 @@
                     
 
                     
-                        <li>
-                            <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
+                    <li>
+                        <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
-                            </a>
-                        </li>
+                        </a>
+                    </li>
                     
 
                     
@@ -266,8 +274,17 @@
 
                     
                 </ul>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+                <p class="copyright text-muted">
+                    <span id="busuanzi_container_site_pv">
+                            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                </p>
+                <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <p class="copyright text-muted">Original Theme <a target="_blank"
+                                                                  href="http://startbootstrap.com/template-overviews/clean-blog/">Clean
+                        Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a
+                            href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
             </div>
         </div>
     </div>
@@ -287,7 +304,7 @@
 <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/bootstrap.min.js"></script>-->
 
 <!-- Gallery -->
-<script src="https://rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
 <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
 
