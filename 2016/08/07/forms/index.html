@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="分享你需要的和喜欢的文章">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="iAngular">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Step 4 - Forms"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="分享你需要的和喜欢的文章" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="HACKING WITH ANGULAR"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Step 4 - Forms - HACKING WITH ANGULAR</title>
+
+    <!-- # add favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>-->
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/html5shiv.js"></script>-->
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />-->
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">iAngular</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/hacking-with-angular">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/images/angular2-travel/basics-demo-form.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Step 4 - Forms</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-08-07
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p id="busuanzi_container_page_pv" style="font-size: 20px; color: #337ab7; text-align: center;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span id="busuanzi_value_page_pv"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Tags and categories -->
+            
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                
+
+
+<a href="/tags/Angular2/">#Angular2</a> <a href="/tags/Travel/">#Travel</a>
+
+
+                
+            </div>
+            <div class="col-lg-4 col-md-5 post-categories">
+                
+            </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p><strong>系统提示: 阅读此文大概需要我也不知道几分钟…</strong></p>
+<p>今天我们要带领大家走进一个新天地,那就是Angular2的<strong>表单</strong>;众所周知基本上所有的web系统都会涉及到关于表单的操作,在那些电商类的网站中,表单更是占据着重要的地位;而且表单的<strong>验证</strong>,友好的<strong>信息提示</strong>,表单的<strong>提交</strong>等等都是web前端开发者常常需要花费大量的时间和精力去完成的任务.但是现在,通过使用Angular2与表单相关的指令和特性我们可以很方便的解决上面的问题,Oh,耶!</p>
+<p>当然,说得再多不如我们亲自来实践一下,毕竟<strong>实践出真知</strong>;当然搞不好如果你看了这篇文章,说不定也就喜欢上使用<strong>Angular2</strong>了呢?(我才不信呢…)</p>
+<p>好,让我们开始这愉快的旅行;首先我们这个小的练习还是在<a href="https://github.com/hacking-with-angular/angular2-travel/tree/quickstart" target="_blank" rel="external"><strong>QuickStart</strong></a>的基础上进行的,所以你还是要先完成这一步,才可以进行下面的练习.</p>
+<p>首先我们写一个简单的表单模板:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"DEMO-form-container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is A Awesome Form!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>Username<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"Username"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"Email"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"motto"</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"motto"</span> <span class="attr">placeholder</span>=<span class="string">"Motto"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"favorite"</span>&gt;</span>Favorite fruit<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"favorite"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"apple"</span>&gt;</span>apple<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"banana"</span>&gt;</span>banana<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"pear"</span>&gt;</span>pear<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"orange"</span>&gt;</span>orange<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>它的路径是<code>app/templates/form.html</code>,然后我们修改一下<code>app.component.ts</code>文件中我们对这个组件的配置:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;'</span></div><div class="line">    templateUrl: <span class="string">'app/templates/form.html'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>为了样式好看一点,我们直接使用<code>bootstrap</code>的样式,并且新增了一个样式文件<code>form.css</code>用来控制表单的样式,方便我们后边的使用;在<code>index.html</code>中我们的修改如下:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Bootstrap--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Form.css --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"app/style/form.css"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- Style.css --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"styles.css"</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>在根目录下我们运行命令<code>npm run start</code>我们就看到了一个简单到不能再简单的表单了;不要小看这个表单哦,在接下来的十几分钟内,它在我们<code>Angular2</code>的帮助下将会变成一个<strong>超级英雄</strong>;就像是电影中的老桥段,一个失魂落魄的少年受到大师的指点,突然间就变成了叱咤江湖的英雄.</p>
+<p>我们首先要做的第一件事情就是将表单的数据展示到表单中,在进行这一步骤之前我们需要知道在<code>Angular</code>中,我们有两种方式来构建表单,其中一种就是我们今天要给大家讲解的<strong><code>模板驱动</code></strong>的表单,还有另一种创建表单的方式那就是<strong><code>模型驱动</code></strong>的表单;关于模型驱动的表单,我们会在后面的章节中给大家讲解,今天我们先来研究一下模板驱动的表单.</p>
+<p><strong>系好安全带,老司机要开车了</strong>;在展示数据之前,我们需要一个创建一个<code>User</code>类,这个类用来创建我们的用户数据:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> User &#123;</div><div class="line">    <span class="keyword">constructor</span>(</div><div class="line">        public username: string,</div><div class="line">        public email: string,</div><div class="line">        public motto: string,</div><div class="line">        public favorite: string</div><div class="line">    )&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>一个很简单的类,用来创建我们的用户实例.然后我们需要在<code>AppComponent</code>中导入这个类,并且初始化一个<code>user</code>;<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用User类</span></div><div class="line"><span class="keyword">import</span> &#123;User&#125; from <span class="string">'./classes/User'</span>;</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    user = <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="string">'2451123321@qq.com'</span>, <span class="string">'Nothing is impossible!'</span>, <span class="string">'apple'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>就像上面这样,我们已经初始化好一个<code>user</code>实例了;可是,我们怎么将数据展示在表单中呢?如果你学习过<code>ng1</code>,那么你会想到使用<code>ng-model</code>这个内置的指令;但是小伙子,我们学的是<code>ng2</code>,当然不可以使用<code>ng-model</code>了;那么,我们应该使用什么呢?好啦,不兜圈子了,在<code>ng2</code>中我们使用<strong>[(ngModel)]</strong>来进行数据的双向绑定.</p>
+<p><strong>在这里我们要另起一行,以唤起大家对这个指令的足够重视;</strong>上面几节中我们已经掌握了一些基本的招式,那就是<strong>使用<code>[]</code>表示数据是从模型到模板的单项绑定;使用<code>()</code>表示数据是从模板到模型的单项绑定;</strong>非常自然而然地,如果我们使用<code>[(ngModel)]</code>那应该表示模板和模型之间数据的双向绑定咯;Bingo,确实如此,我们先来尝试使用以下再说吧.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"DEMO-form-container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is A Awesome Form!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"username"</span>&gt;</span>Username<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span>  [(<span class="attr">ngModel</span>)]=<span class="string">"user.username"</span></span></div><div class="line">                    <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"Username"</span>&gt;</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"email"</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span>  [(<span class="attr">ngModel</span>)]=<span class="string">"user.email"</span></span></div><div class="line">                    <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">placeholder</span>=<span class="string">"Email"</span>&gt;</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"motto"</span>&gt;</span>Motto<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">input</span>  [(<span class="attr">ngModel</span>)]=<span class="string">"user.motto"</span></span></div><div class="line">                    <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"motto"</span> <span class="attr">placeholder</span>=<span class="string">"Motto"</span>&gt;</div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"favorite"</span>&gt;</span>Favorite fruit<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">select</span> [(<span class="attr">ngModel</span>)]=<span class="string">"user.favorite"</span></span></div><div class="line">                    <span class="attr">id</span>=<span class="string">"favorite"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>&gt;</div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"apple"</span>&gt;</span>apple<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"banana"</span>&gt;</span>banana<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"pear"</span>&gt;</span>pear<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"orange"</span>&gt;</span>orange<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>上面的代码就是我们使用<code>[(ngModel)]</code>的一个例子,这样我们就把用户的数据展示到表单里面了;先庆祝一下,至少到现在为止我们已经知道如何在表单中展示数据了.为了在我们对表单的数据做出改动的时候可以直观的看到它们的变化,我们在组件<code>AppComponent</code>中添加一个属性,我们使用<code>Getter</code>来获取这个属性.如果对<code>getter/setter</code>不是很熟悉的话,可以狠狠的点击这里<a href="http://dreamapple.leanapp.cn/gitbook/typescript/doc/handbook/Classes.html" target="_blank" rel="external">TypeScript存取器</a>.<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    user = <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="string">'2451123321@qq.com'</span>, <span class="string">'Nothing is impossible!'</span>, <span class="string">'apple'</span>);</div><div class="line"></div><div class="line">    <span class="keyword">get</span> userInfo() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.user);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们在模板中添加一些HTML片段来展示我们的<code>user</code>数据:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ... --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is A Awesome Form!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"user-msg"</span>&gt;</span>UserInfo: &#123;&#123;userInfo&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- ... --&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这样我们改变表单中的数据,就可以在上面看到实时的变化,如下图所示;这就说明,使用<code>[()]</code>确实是能够起到双向绑定的作用的.<br><img src="/images/angular2-travel/form-demo-1.jpg" alt="表单图片"></p>
+<p>在前面几章节的学习中中,我们知道可以使用模板变量来对一个模板中的<code>input</code>模板进行赋值和取值;但是还是有点麻烦,当我们遇到<code>[(ngModel)]</code>后,一切都变得那么简单;我们接着来讲解<code>[(ngModel)]</code>这种双向绑定数据的方式;</p>
+<p><strong>既然我们已经知道可以使用<code>[]</code>和<code>()</code>来进行数据的单项并且不同方向的绑定,我们何不尝试着把<code>[(ngModel)]</code>进行拆分呢?</strong>看到这里,大家的思路应该是这样子的:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;input  #username</div><div class="line">        [ngModel]=<span class="string">"user.username"</span></div><div class="line">        (ngModel)=<span class="string">"user.username = username.value"</span></div><div class="line">        <span class="keyword">type</span>=<span class="string">"text"</span> <span class="keyword">class</span>=<span class="string">"form-control"</span> id=<span class="string">"username"</span> placeholder=<span class="string">"Username"</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>然而事情并不像我们预期的那样,因为<code>ng2</code>中不是通过<code>ngModel</code>事件来触发表单中数据变化的操作,而是通过<code>ngModelChange</code>;所以我们将<code>(ngModel)=&quot;user.username = username.value&quot;</code>改为<code>(ngModelChange)=&quot;user.username = username.value&quot;</code>就可以实现我们想要的那个结果啦.</p>
+<p>当然既然我们使用了<code>[(ngModel)]</code>就不需要使用模板变量了,所以我们改一下上面的代码:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input  [ngModel]=<span class="string">"user.username"</span></div><div class="line">        (ngModelChange)=<span class="string">"user.username = $event"</span></div><div class="line">        <span class="keyword">type</span>=<span class="string">"text"</span> <span class="keyword">class</span>=<span class="string">"form-control"</span> id=<span class="string">"username"</span> placeholder=<span class="string">"Username"</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>我知道你想问什么;上面代码中的<code>$event</code>是什么鬼?为什么可以直接使用,难道<code>$event</code>不代表DOM事件吗?别着急,待我细细说来,这个<code>$event</code>是<code>ngModelChange</code>属性返回的输入框的值,它是一个Angular<code>EventEmitter</code>类型的属性,这个值就是我们想要的输入框的值.</p>
+<p>在有些情况下,我们需要在数据从模板流向模型的时候做一些特殊的处理;比如合并或者限制按键频率,这个时候我们就需要使用<code>(ngModelChange)</code>了;当然大部分情况下<code>[(ngModel)]</code>已经足够满足我们使用了,如果你还想深入的了解一下<code>ngModel</code>可以看看这里<a href="https://angular.cn/docs/ts/latest/guide/template-syntax.html" target="_blank" rel="external">模板语法</a>.</p>
+<p>忽然发现一个问题,我们的下拉选择框还是静态的内容;我们可不希望是这样子的,所以我们来动手修改一下这个下拉框吧;使用的也还都是前面几章中提到的知识点:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//...</span></div><div class="line">favoriteFruitList = [<span class="string">'apple'</span>, <span class="string">'pear'</span>, <span class="string">'banana'</span>, <span class="string">'orange'</span>];</div><div class="line">user = <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="string">'2451123321@qq.com'</span>, <span class="string">'Nothing is impossible!'</span>, <span class="keyword">this</span>.favoriteFruitList[<span class="number">0</span>]);</div><div class="line"><span class="comment">//...</span></div></pre></td></tr></table></figure></p>
+<p>我们给这个组件新增加了一个<code>favoriteFruitList</code>属性,它是一个数组,包含了我们的水果选项;然后我们使用<code>this.favoriteFruitList[0]</code>来初始化我们用户喜欢的水果.然后我们还要修改一下我们的模板:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--&lt;select [(ngModel)]="user.favorite"--&gt;</span></div><div class="line">        <span class="comment">&lt;!--id="favorite" class="form-control"&gt;--&gt;</span></div><div class="line">    <span class="comment">&lt;!--&lt;option value="apple"&gt;apple&lt;/option&gt;--&gt;</span></div><div class="line">    <span class="comment">&lt;!--&lt;option value="banana"&gt;banana&lt;/option&gt;--&gt;</span></div><div class="line">    <span class="comment">&lt;!--&lt;option value="pear"&gt;pear&lt;/option&gt;--&gt;</span></div><div class="line">    <span class="comment">&lt;!--&lt;option value="orange"&gt;orange&lt;/option&gt;--&gt;</span></div><div class="line"><span class="comment">&lt;!--&lt;/select&gt;--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">select</span> [(<span class="attr">ngModel</span>)]=<span class="string">"user.favorite"</span> <span class="attr">id</span>=<span class="string">"favorite"</span> <span class="attr">class</span>=<span class="string">"form-control"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">option</span> *<span class="attr">ngFor</span>=<span class="string">"let fruit of favoriteFruitList"</span></span></div><div class="line">            [<span class="attr">value</span>]=<span class="string">"fruit"</span>&gt;&#123;&#123;fruit&#125;&#125;<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>至此,我们已经学习了不少东西了;但是最酷炫的部分还没有学习呢?我们接下来要学习的部分就是关于表单的验证,我们在设计表单的时候,常常会在用户输入错误信息的时候或者忘记输入一些信息的时候给用户一些温馨的提示;在<code>ng2</code>中我们通过<code>ngModel</code>来跟踪用户的输入状态并且根据输入状态来判断表单中某些部分的有效性,进而决定要不要给用户一些提示等等.</p>
+<p><strong>ngModel</strong>这个指令不仅仅跟踪表单的状态,它还会告诉我们一些关于表单控件的额外信息;那就是<strong>用户碰过这个控件了吗?这个控件的值发生了变化吗?数据变得无效了吗?</strong></p>
+<p><strong>ngModel</strong>还会使用一些特殊的<code>CSS</code>类名来更新我们控件的<code>className</code>列表,我们可以通过定制这些CSS类的样式来更改控件的外观,或者让一些消息显示或者隐藏.</p>
+<p>要想使用上面所说的那些特性,我们的表单控件需要具备两个特点:(1)存在<code>name</code>属性;(2)使用了<code>[(ngModel)]</code>指令;我们为什么一定要使用<code>name</code>属性呢?那是因为在<code>ng2</code>的内部,每一个<code>&lt;form&gt;</code>表单实际上都附加了一个<code>NgForm</code>指令,<code>ng2</code>会在每一个表单上产生一个<code>FormControls(表单控制)</code>并且把这个<code>FormControls</code>注册在表单中,每一个<code>FormControl</code>都是以<code>name</code>属性作为唯一的依据来进行注册的;如果没有看懂,不要紧我们会在后面的章节中更加深入的讲解.</p>
+<p><strong>好了,能动手解决的,我们绝不瞎比比;</strong>我们首先让表单的<code>username</code>控件作为我们的实验对象吧:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;input  [(ngModel)]=<span class="string">"user.username"</span> name=<span class="string">"username"</span> required #spy</div><div class="line">        <span class="keyword">type</span>=<span class="string">"text"</span> <span class="keyword">class</span>=<span class="string">"form-control"</span> id=<span class="string">"username"</span> placeholder=<span class="string">"Username"</span>&gt;</div><div class="line">&lt;p&gt;className: &#123;&#123;spy.className&#125;&#125;&lt;<span class="regexp">/p&gt;</span></div></pre></td></tr></table></figure></p>
+<p>忘了说了,这个<code>name</code>属性还必须是唯一的,不然会出错的;说明一下上面的代码,我们首先给<code>input</code>这个控件添加了<code>name</code>属性,还添加了一个原生的<code>required</code>属性表明这个控件必须是有值的;然后我们给这个控件绑定了一个模板变量<code>spy</code>,然后我们在下面引用这个模板变量展示出这个控件的<code>className</code>列表.好了,下面我们要操作这个控件了;</p>
+<p>当我们刚打开页面的时候,<code>className</code>的值为:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">form</span>-control ng-untouched ng-pristine ng-valid</div></pre></td></tr></table></figure></p>
+<p>然后我们点击这个输入框然后点击页面空白部分,会看到<code>className</code>的值变为:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">form</span>-control ng-pristine ng-valid ng-touched</div></pre></td></tr></table></figure></p>
+<p>我们在修改一下这个控件的值,这时<code>className</code>的值变为:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">form</span>-control ng-valid ng-touched ng-dirty</div></pre></td></tr></table></figure></p>
+<p>我们完全删除这个输入框中的值,<code>className</code>的值变为:<br><figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">form</span>-control ng-dirty ng-invalid ng-touched</div></pre></td></tr></table></figure></p>
+<p>我们可以清楚地看到,用户的操作会引起控件的<code>className</code>的变化,我们也就可以根据这些变化的类名,来对这些控件做出一些样式上的改变,以便给用户提供一些有效的信息.</p>
+<p>好,下面我们就要添加一些<code>CSS</code>的样式,来改变我们的表单了;是时候让我们的表单变得的强大一点了:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ng-valid</span><span class="selector-attr">[required]</span> &#123;</div><div class="line">    <span class="attribute">border-left</span>: <span class="number">5px</span> solid <span class="number">#42A948</span>; <span class="comment">/* green */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.ng-invalid</span> &#123;</div><div class="line">    <span class="attribute">border-left</span>: <span class="number">5px</span> solid <span class="number">#a94442</span>; <span class="comment">/* red */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面的样式用来添加到<code>form.css</code>里面,当用户的输入是正确的时候我们会在输入框前面加上一个绿颜色的竖条,当用户输入错误的时候,我们会在输入框的前面加上一个暗红颜色的竖条.就像下面这样:<br><img src="/images/angular2-travel/form-correct.jpg" alt="输入正确"><br>输入错误的时候应该是下面这样:<br><img src="/images/angular2-travel/form-error.jpg" alt="输入错误"></p>
+<p>上面的修改已经很好了,能够提示用户一些有用的信息了;但是用户可能无法根据一个暗红色的竖条知道他(她)哪里出错了,所以我们还需要给用户一些提示的信息才可以.我们可以再次使用模板变量来达到这个效果.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span>  [(<span class="attr">ngModel</span>)]=<span class="string">"user.username"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">required</span> #<span class="attr">spy</span> #<span class="attr">username</span>=<span class="string">"ngModel"</span></span></div><div class="line">        <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"form-control"</span> <span class="attr">id</span>=<span class="string">"username"</span> <span class="attr">placeholder</span>=<span class="string">"Username"</span>&gt;</div><div class="line"><span class="tag">&lt;<span class="name">p</span> [<span class="attr">hidden</span>]=<span class="string">"username.pristine || username.valid"</span> <span class="attr">class</span>=<span class="string">"alert alert-danger"</span>&gt;</span>用户名不可以为空!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>我当然知道你这时候又有一些问题了;待我给你慢慢解释,首先我们使用了<code>#username=&quot;ngModel&quot;</code>,我们又新增了一个模板变量<code>username</code>然后给它赋值为<code>ngModel</code>,我们为什么要这么做呢?首先我们想让<code>username</code>链接到这个控件的<code>[(ngModel)]</code>指令中,之所以使用<code>ngModel</code>是因为这个指令的<a href="https://angular.cn/docs/ts/latest/api/core/index/DirectiveMetadata-class.html#!#exportAs" target="_blank" rel="external">exportAs</a>属性值为<code>ngModel</code>.</p>
+<p>但是,当我们运行的时候;却出现了错误…这是为什么呢?<br><img src="/images/angular2-travel/exception-1.jpg" alt="exception-1"></p>
+<p><strong>因为我们一直没有引入表单需要的依赖<code>provideForms</code>,所以就出现了上面的错误.</strong>那我们现在把这个依赖加进去,下面的代码添加到<code>main.ts</code>里面:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;bootstrap&#125; from <span class="string">'@angular/platform-browser-dynamic'</span>;</div><div class="line"><span class="keyword">import</span> &#123;disableDeprecatedForms, provideForms&#125; from <span class="string">'@angular/forms'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;AppComponent&#125; from <span class="string">'./app.component'</span>;</div><div class="line"><span class="comment">//noinspection TypeScriptValidateTypes</span></div><div class="line"><span class="comment">//bootstrap(AppComponent);</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123;AppComponent&#125; from <span class="string">'./app.component'</span>;</div><div class="line"><span class="comment">//noinspection TypeScriptValidateTypes</span></div><div class="line">bootstrap(AppComponent, [</div><div class="line">    disableDeprecatedForms(),</div><div class="line">    provideForms()</div><div class="line">])</div><div class="line">.catch((err: <span class="built_in">any</span>) =&gt; <span class="built_in">console</span>.error(err));</div></pre></td></tr></table></figure></p>
+<p>我们也顺便把老的表单API给禁用了,因为我们添加了<code>disableDeprecatedForms</code>依赖.但是当我们再次运行的时候,还是报了错:<br><img src="/images/angular2-travel/exception-2.jpg" alt="exception-2"><br>这次给我们的提示是,我们没有给每一个使用了<code>ngModel</code>指令的控件添加一个<code>name</code>属性;所以赶紧添加<code>name</code>属性吧.添加完成之后,我们的表单终于正常了,刚才一定是走火入魔了.</p>
+<p>现在当我们把<code>username</code>表单中的内容删除的时候,就会看到有提示消息显示<code>用户名不可以为空!</code>,并且输入框的左侧有一个暗红色的小竖条.是不是感觉很不错.我们继续为剩下的(除去下拉框)那些表单控件添加<code>required</code>属性,还有一些提示的消息吧.</p>
+<p>好啦,关于表单的验证上面的讲解已经可以在大部分情况下满足我们的使用了;下面我们来给这个表单添加一些其他的功能吧;我们给组件<code>AppComponent</code>新增加一个方法<code>addUser</code>,每当我们点击表单上的哪个新增用户的按钮的时候,我们就要清空一下表单;,然后重新进行输入:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">addUser() &#123;</div><div class="line">    <span class="keyword">this</span>.user = <span class="keyword">new</span> User(<span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后我们修改模板:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--...--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn btn-primary"</span> (<span class="attr">click</span>)=<span class="string">"addUser()"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>&gt;</span>addUser<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--...--&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后当我们点击<code>addUser</code>按钮的时候,会发现哪个<code>Username</code>的输入框左边会有一个暗红色的小竖条;这些都是在预料之中的,但是当我们在<code>Username</code>输入框中输入一些内容,然后再次点击<code>addUser</code>按钮的时候,意外却发生了:<br><img src="/images/angular2-travel/form-error-1.jpg" alt="表单错误1"></p>
+<p>这是为什么,我们的逻辑应该没有错误呀?确实不是我们的错误,是<code>Angular2</code>没有明白我们的意思…因为在这种实现方式下,<code>Angular</code>没有办法区分是替换了整个用户的数据还是用程序单独清除了<code>username</code>属性.当然<code>Angular</code>也不能作出假设,所以它只好保存了当前的状态,就是<code>被污染</code>的状态.</p>
+<p>所以我们只好再次讨好<code>Angular</code>,被迫做出一些小花招;我们给组件添加一个<code>active</code>标记,把它初始化为<code>true</code>.当我们新增加一个用户的时候,就把它标记为<code>false</code>;然后通过<code>setTimeout</code>迅速的把它重新设置回<code>true</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    active: <span class="built_in">boolean</span> = <span class="literal">true</span>;</div><div class="line">    favoriteFruitList = [<span class="string">'apple'</span>, <span class="string">'pear'</span>, <span class="string">'banana'</span>, <span class="string">'orange'</span>];</div><div class="line">    user = <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="string">'2451123321@qq.com'</span>, <span class="string">'Nothing is impossible!'</span>, <span class="keyword">this</span>.favoriteFruitList[<span class="number">0</span>]);</div><div class="line"></div><div class="line">    <span class="keyword">get</span> userInfo() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.user);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    addUser() &#123;</div><div class="line">        <span class="keyword">this</span>.active = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>.user = <span class="keyword">new</span> User(<span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>);</div><div class="line">        setTimeout(() =&gt; <span class="keyword">this</span>.active = <span class="literal">true</span>, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在模板中我们使用<code>NgIf</code>指令来控制整个表单:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--...--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span> *<span class="attr">ngIf</span>=<span class="string">"active"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--...--&gt;</span></div></pre></td></tr></table></figure></p>
+<p>我们这样做的目的,就是为了每次新添加用户的时候,整个表单的状态都是全新的.当然这只是一个小小的<code>hack</code>写法,后面我们会学习如何使用更标准的方法达到我们上面的目的.</p>
+<p>如果看到这里你还没有睡着的话,那么,<strong>小伙子我觉得你骨骼惊奇,很适合敲代码,来跟我们一起学做菜吧!</strong>我们说了这么多,却迟迟没有看到表单的提交?好啦,下面我们来讲解一下关于表单的提交;我们可以通过使用<code>ngSubmit</code>事件来达到提交表单的功能;我们先写一个提交表单的方法吧:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">submitForm() &#123;</div><div class="line">    alert(<span class="keyword">this</span>.userInfo + <span class="string">'已经被提交!'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后再次修改模板:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--...--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span> *<span class="attr">ngIf</span>=<span class="string">"active"</span> (<span class="attr">ngSubmit</span>)=<span class="string">"submitForm()"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--...--&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这样当我们点击<code>Submit</code>按钮的时候,我们就可以进行表单的提交啦.虽然上面只是一个简单的弹出框,但是已经达到了我们想要的效果.</p>
+<p>一般情况下,如果用户填写的表单不合法,我们是不允许表单的提交的;那么我们应该怎么做呢?相信你已经有了答案.对就是使用模板变量,我们可以在表单和提交按钮上做一些小文章:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--...--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">class</span>=<span class="string">"DEMO-form"</span> *<span class="attr">ngIf</span>=<span class="string">"active"</span> (<span class="attr">ngSubmit</span>)=<span class="string">"submitForm()"</span> #<span class="attr">userForm</span>=<span class="string">"ngForm"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--...--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> [<span class="attr">disabled</span>]=<span class="string">"!userForm.form.valid"</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">class</span>=<span class="string">"btn btn-default"</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--...--&gt;</span></div></pre></td></tr></table></figure></p>
+<p>就像我们上面是使用<code>#username=&quot;ngModel&quot;</code>一样,这次我们使用的是<code>#userForm=&quot;ngForm&quot;</code>前面已经说过了,<code>Angular</code>会为每一个表单附加一个<code>ngForm</code>指令;每当表单不合法的时候我们就禁止表单的提交,就是让<code>Submit</code>按钮禁用.到此为止我们要讲解的内容就差不多讲完了.</p>
+<p><strong>但是</strong>,我们今天还要额外的多讲解一点知识;那就是关于组件的使用,我们把上面的表单封装成一个组件吧.我们新建一个文件<code>form.component.ts</code>,然后把所有的逻辑都放到这里面,我们再新建一个模板文件<code>app.html</code>,用来放置<code>AppComponent</code>组件的模板.首先是<code>form.component.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 使用User类</span></div><div class="line"><span class="keyword">import</span> &#123;User&#125; from <span class="string">'./classes/User'</span>;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"> * 别忘记了使用@前缀</div><div class="line"> * 这里相当于组件视图</div><div class="line"> */</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-form'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;'</span></div><div class="line">    templateUrl: <span class="string">'app/templates/form.html'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"> * 导出这个组件,也就是一个类</div><div class="line"> * 这里相当于组件控制器</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> FormComponent &#123;</div><div class="line">    active: <span class="built_in">boolean</span> = <span class="literal">true</span>;</div><div class="line">    favoriteFruitList = [<span class="string">'apple'</span>, <span class="string">'pear'</span>, <span class="string">'banana'</span>, <span class="string">'orange'</span>];</div><div class="line">    user = <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="string">'2451123321@qq.com'</span>, <span class="string">'Nothing is impossible!'</span>, <span class="keyword">this</span>.favoriteFruitList[<span class="number">0</span>]);</div><div class="line"></div><div class="line">    <span class="keyword">get</span> userInfo() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.user);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    addUser() &#123;</div><div class="line">        <span class="keyword">this</span>.active = <span class="literal">false</span>;</div><div class="line">        <span class="keyword">this</span>.user = <span class="keyword">new</span> User(<span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>, <span class="string">''</span>);</div><div class="line">        setTimeout(() =&gt; <span class="keyword">this</span>.active = <span class="literal">true</span>, <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    submitForm() &#123;</div><div class="line">        alert(<span class="keyword">this</span>.userInfo + <span class="string">'已经被提交!'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意<code>selector</code>选项我们修改了它的值为<code>my-form</code>,然后我们修改<code>app.component.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;FormComponent&#125; from <span class="string">'./form.component'</span>;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"> * 别忘记了使用@前缀</div><div class="line"> * 这里相当于组件视图</div><div class="line"> */</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    directives: [</div><div class="line">        FormComponent</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"> * 导出这个组件,也就是一个类</div><div class="line"> * 这里相当于组件控制器</div><div class="line"> */</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>我们导入了<code>FormComponent</code>组件,并且在<code>directives</code>选项中添加了它;关于为什么要这样使用,我们后面的文章中会再次介绍的,现在大家先知道是这样使用就行啦.然后是<code>app.html</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, World!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">my-form</span>&gt;</span><span class="tag">&lt;/<span class="name">my-form</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>我们添加了一个新的标签<code>my-form</code>,这就是我们在<code>form.component.ts</code>中使用<code>selector: &#39;my-form&#39;</code>的原因.</p>
+<p>终于结束啦,希望大家可以学的开心,然后能更好的使用<code>Angular2</code>.</p>
+<p>欢迎提<a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io/issues" target="_blank" rel="external">issue</a>,这篇文章的<a href="https://github.com/hacking-with-angular/angular2-travel/tree/basics-demo-forms-v1" target="_blank" rel="external">项目地址</a>.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- #添加多说评论 -->
+
+
+
+
+
+            </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr/>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                    <li>
+                        <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    <span id="busuanzi_container_site_pv">
+                            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                </p>
+                <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <p class="copyright text-muted">Original Theme <a target="_blank"
+                                                                  href="http://startbootstrap.com/template-overviews/clean-blog/">Clean
+                        Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a
+                            href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>-->
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/bootstrap.min.js"></script>-->
+
+<!-- Gallery -->
+<script src="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
