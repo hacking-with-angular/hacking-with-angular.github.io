@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="分享你需要的和喜欢的文章">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="iAngular">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Step 5 - Dependency Injection"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="分享你需要的和喜欢的文章" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="HACKING WITH ANGULAR"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Step 5 - Dependency Injection - HACKING WITH ANGULAR</title>
+
+    <!-- # add favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>-->
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/html5shiv.js"></script>-->
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />-->
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">iAngular</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/hacking-with-angular">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/images/piano-player.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Step 5 - Dependency Injection</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        Posted by dreamapplehappy on
+                        
+                        2016-08-11
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p id="busuanzi_container_page_pv" style="font-size: 20px; color: #337ab7; text-align: center;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span id="busuanzi_value_page_pv"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Tags and categories -->
+            
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                
+
+
+<a href="/tags/Angular2/">#Angular2</a> <a href="/tags/Travel/">#Travel</a>
+
+
+                
+            </div>
+            <div class="col-lg-4 col-md-5 post-categories">
+                
+            </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>在读这篇文章之前,你要先了解一下什么是<a href="https://en.wikipedia.org/wiki/Dependency_injection" target="_blank" rel="external">依赖注入</a>,网上关于这个的解释很多,大家可以自行<a href="https://www.google.com.hk/search?rlz=1C5CHFA_enKR651TW659&amp;q=Dependency+Injection&amp;spell=1&amp;sa=X&amp;ved=0ahUKEwjpm6vovdLOAhXBqo8KHVcMAZMQvwUIGSgA" target="_blank" rel="external"><strong>Google</strong></a>.</p>
+<p><img src="https://segmentfault.com/img/bVAsmD" alt="article-cover"></p>
+<p>我们这一篇文章还是以<a href="https://github.com/hacking-with-angular/angular2-travel/tree/quickstart" target="_blank" rel="external">QuickStart</a>项目为基础,从头开始讲解怎么在Angular2中使用<strong>依赖注入</strong>,如果你按照本篇文章中讲解的示例亲自走一遍的话,你一定能够掌握如何在Angular2中使用<strong>依赖注入</strong>.好,废话不多说,开始我们今天的旅行吧!</p>
+<p>我们首先将项目中的内联模板替换为一个模板文件,使用<code>templateUrl</code>替换<code>template</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: 'my-app',</div><div class="line">    //template: '<span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Angular2 Travel<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>',</div><div class="line">    templateUrl: 'app/templates/app.html'</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>接下来我们给自己的页面添加一些展示的数据,我们首先新建一个文件<code>app/classes/User.ts</code>,用来创建我们的<code>User</code>实例:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> User&#123;</div><div class="line">    <span class="keyword">constructor</span>(</div><div class="line">        private name:string,</div><div class="line">        private age:number,</div><div class="line">        private email:string</div><div class="line">    )&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后我们在组件中引入这个类,然后创建我们的显示数据:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;User&#125; from <span class="string">"./classes/User"</span>;</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    users: User[] = [</div><div class="line">        <span class="keyword">new</span> User(<span class="string">'dreamapple'</span>, <span class="number">22</span>, <span class="string">'2312674832@qq.com'</span>),</div><div class="line">        <span class="keyword">new</span> User(<span class="string">'dreamapplehappy'</span>, <span class="number">18</span>, <span class="string">'2313334832@qq.com'</span>)</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>别忘了在模板中添加一些展示数据使用的html代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>依赖注入<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> *<span class="attr">ngFor</span>=<span class="string">"let user of users"</span>&gt;</span></div><div class="line">        用户的姓名: &#123;&#123;user.name&#125;&#125;; 用户的年龄: &#123;&#123;user.age&#125;&#125;; 用户的邮箱: &#123;&#123;user.email&#125;&#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>然后我们就会看到,在页面中显示出来了我们想要的那些数据:<br><img src="https://segmentfault.com/img/bVAn59" alt="ng2-di-1"></p>
+<p><strong>Angular2的依赖注入</strong></p>
+<p>一般情况下在Web应用中,我们要展示的数据都是从后台服务器动态获取的,所以我们来模拟一下这个过程;我们在这里就要使用<strong>服务的依赖注入</strong>了,我们首先创建文件<code>user-data.mock.ts</code>,路径是<code>app/mock/user-data.mock.ts</code>;</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;User&#125; from <span class="string">"../classes/User"</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">var</span> Users:User[] = [</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple1'</span>, <span class="number">21</span>, <span class="string">'2451731631@qq.com'</span>),</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple2'</span>, <span class="number">22</span>, <span class="string">'2451731632@qq.com'</span>),</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple3'</span>, <span class="number">23</span>, <span class="string">'2451731633@qq.com'</span>),</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple4'</span>, <span class="number">24</span>, <span class="string">'2451731634@qq.com'</span>),</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple5'</span>, <span class="number">25</span>, <span class="string">'2451731635@qq.com'</span>),</div><div class="line">    <span class="keyword">new</span> User(<span class="string">'dreamapple6'</span>, <span class="number">26</span>, <span class="string">'2451731636@qq.com'</span>)</div><div class="line">]</div></pre></td></tr></table></figure>
+<p>我们使用了<code>User</code>类来创建我们的数据,然后把创建的数据导出.</p>
+<p>接下来我们要创建一个获取用户数据的<strong>服务</strong>,我们创建一个新的文件<code>user.service.ts</code>,路径<code>app/services/user.service.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;Users&#125; from <span class="string">"../mock/user-data.mock"</span>;</div><div class="line"></div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> UserService &#123;</div><div class="line">    getUsers() &#123;</div><div class="line">        <span class="keyword">return</span> Users;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>大家关于上面的代码部分会有一些疑问,我们来给大家解释一下:首先我们使用了刚才我们创造的模拟数据<code>Users</code>;然后我们从<code>@angular/core</code>中导出了<code>Injectable</code>,就像我们从中导出<code>Component</code>一样;<strong><code>@Injectable()</code>标志着一个类可以被一个注入器实例化;通常来讲,在试图<code>实例化</code>一个没有被标识为<code>@Injectable()</code>的类时候,注入器将会报告错误.</strong>上面的解释现在不明白不要紧,我们先学会如何使用;<strong>就像你不懂计算机原理一样可以把计算机玩得很溜一样.</strong></p>
+<p>我们接下来要在<code>AppComponent</code>组件中使用<code>UserService</code>了,需要注意的地方是:我们要在<code>@Component</code>的元数据中使用<code>providers</code>声明我们所需要的依赖,还要引入<code>User</code>类来帮助我们声明数据的类型.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;UserService&#125; from <span class="string">"./services/user.service"</span>;</div><div class="line"><span class="keyword">import</span> &#123;User&#125; from <span class="string">"./classes/User"</span>;</div><div class="line"><span class="comment">//...</span></div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;',</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    providers: [</div><div class="line">        UserService</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    users: User[];</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(private userService: UserService) &#123;</div><div class="line">        <span class="keyword">this</span>.users = userService.getUsers();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对上面代码的一些解释:<strong>我们使用<code>providers: [UserService]</code>来声明我们这个组件的依赖,如果没有这个选项,我们的程序会报错;然后我们给这个类添加一个属性<code>users</code>,同时声明这个属性的类型是一个含有<code>User</code>类实例的数组;最后我们在构造函数中又声明了一个私有的属性<code>userService</code>,它是<code>UserService</code>服务类的一个实例,我们可以用这个实例来获取<code>users</code>数据.</strong></p>
+<p>运行一下,然后我们就会看到下面的页面,表示一切成功.<br><img src="https://segmentfault.com/img/bVAsbH" alt="ng2-di-2"></p>
+<p>如果这个时候你试图把<code>user.service.ts</code>的<code>@Injectable</code>注释掉的话,整个程序是没有报错的,但是我们建议为每个服务类都添加<code>@Injectable()</code>,包括那些没有依赖所以技术上不需要它的.因为:<strong>(1)面向未来,没有必要记得在后来添加了一个依赖的时候添加<code>@Injectable()</code>.(2)一致性,所有的服务都遵循同样的规则,并且我们不需要考虑为什么少一个装饰器.</strong></p>
+<p>这是因为,我们的<code>UserService</code>服务现在还没有什么依赖,如果我们给<code>UserService</code>添加一个依赖的话,如果这时候把<code>@Injectable()</code>注释掉的话,程序就会报错;我们来试试看吧.</p>
+<p>很多Web程序都会需要一个日志服务,所以我们来新建一个服务<code>Logger</code>,路径如下:<code>app/services/logger.service.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> Logger&#123;</div><div class="line">    logs: <span class="built_in">string</span>[] = [];</div><div class="line"></div><div class="line">    log(msg) &#123;</div><div class="line">        <span class="keyword">this</span>.logs.push(msg);</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">'From logger class: '</span> + msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后我们在<code>UserService</code>服务中使用这个服务:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;Users&#125; from <span class="string">"../mock/user-data.mock"</span>;</div><div class="line"><span class="keyword">import</span> &#123;Logger&#125; from <span class="string">"./logger.service"</span>;</div><div class="line"></div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> UserService &#123;</div><div class="line">    <span class="keyword">constructor</span>(private logger: Logger) &#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getUsers() &#123;</div><div class="line">        <span class="keyword">this</span>.logger.log(<span class="string">'get users'</span>);</div><div class="line">        <span class="keyword">return</span> Users;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到,我们把<code>Logger</code>当做<code>UserService</code>服务的一个依赖,因为我们在<code>UserService</code>类的构造函数中声明了一个<code>logger</code>属性,它是<code>Logger</code>类的一个实例;还有别忘了在<code>AppComponent</code>中添加这个<code>Logger</code>依赖:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;',</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    providers: [</div><div class="line">        Logger, <span class="comment">// 添加Logger依赖</span></div><div class="line">        UserService</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后我们可以在页面中看到:<br><img src="https://segmentfault.com/img/bVAse6" alt="ng2-di-3"></p>
+<p>如果这个时候,我们注释掉<code>UserService</code>的<code>@Injectable()</code>的话,程序就会报错:<br><img src="https://segmentfault.com/img/bVAsfs" alt="ng2-di-4"></p>
+<p>所以,就像上面所说的;我们还是给每一个服务类添加<code>@Injectable()</code>,以免出现不必要的麻烦.</p>
+<p>接下来我们来讨论一下在<code>Angular2</code>中服务的<strong>提供商们</strong>,如果你对所谓的<strong>提供商</strong>不理解的话,没关系;可以这样理解,每当我们使用一个服务的时候,<strong>Angular2</strong>都会通过<strong>提供商</strong>来创建或者获取我们想要的服务的实例.</p>
+<p>我们上面所说的那种提供服务的方式其实是最简单的一种方式,接下来我们讨论注册不同的<strong>服务提供商</strong>的方法;首先第一种就是我们上面所说的那种了,其实它是一种简写的方式;详细的方式应该是这样的:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&#123; provide: Logger, useClass: Logger &#125;]</div></pre></td></tr></table></figure>
+<p>其中<code>provide</code>作为键值<code>key</code>使用,用于定位依赖,用于注册这个提供商;这个其实就是在后面的程序中使用的服务的名字;<code>useClass</code>表示我们使用哪一个服务类去创建实例,当然我们可以使用不同的服务类,只要这些服务的类满足我们相应的需求就行.</p>
+<p>我们可以试着替换<code>Logger</code>类为<code>BetterLogger</code>类,我们首先创建<code>BetterLogger</code>类:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> BetterLogger&#123;</div><div class="line">    logs: <span class="built_in">string</span>[] = [];</div><div class="line"></div><div class="line">    log(msg) &#123;</div><div class="line">        <span class="keyword">this</span>.logs.push(msg);</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">'From better logger class: '</span> + msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后在<code>AppComponent</code>中使用这个<code>BetterLogger</code>类:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;',</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    providers: [</div><div class="line">        <span class="comment">//Logger,</span></div><div class="line">        [&#123;provide: Logger, useClass: BetterLogger&#125;],</div><div class="line">        UserService</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>我们可以看到,控制台的输出是:<br><img src="https://segmentfault.com/img/bVAsiJ" alt="ng2-di-5"></p>
+<p>从中可以看到,我们使用了<code>BetterLogger</code>类替换了<code>Logger</code>类.如果我们的提供商需要一些依赖,我们应该怎么办呢?不用怕,我们可以使用下面这种形式:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[ LoggerHelper,&#123; provide: Logger, useClass: Logger &#125;]</div></pre></td></tr></table></figure>
+<p>接下来我们来创建一个<code>LoggerHelper</code>类,它的路径是<code>app/services/logger-helper.service.ts</code>:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> LoggerHelper &#123;</div><div class="line">    <span class="keyword">constructor</span>() &#123;</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">'Just a logger helper!'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我们在<code>AppComponent</code>中注册提供商:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;',</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    providers: [</div><div class="line">        <span class="comment">//Logger,</span></div><div class="line">        <span class="comment">//[&#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        [LoggerHelper, &#123;provide: Logger, useClass: BetterLogger&#125;], <span class="comment">// 带有依赖的注册商</span></div><div class="line">        UserService</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后我们在<code>BetterLogger</code>服务中使用这个依赖:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;LoggerHelper&#125; from <span class="string">"./logger-helper.service"</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> BetterLogger&#123;</div><div class="line">    logs: <span class="built_in">string</span>[] = [];</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(private loggerHelper: LoggerHelper) &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    log(msg) &#123;</div><div class="line">        <span class="keyword">this</span>.logs.push(msg);</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">'From better logger class: '</span> + msg);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>然后可以看到我们的控制台的输出结果是:<br><img src="https://segmentfault.com/img/bVAskd" alt="ng-di-6"></p>
+<p>说明我们正确的使用了依赖;还有我们可以使用别名来使用相同的提供商,这种方式可以解决一些问题;尤其是当我们想让某个老的组件使用一个新的服务,就好比我们想让<code>AppComponent</code>使用<code>BetterLogger</code>类来打印日志,而不是使用<code>Logger</code>类,假如我们不能够改变<code>AppComponent</code>类,并且我们还想让其他的组件也是用新的<code>BetterLogger</code>类的话,那么我们就可以像下面这样注册这个提供商</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[&#123; provide: BetterLogger, useClass: BetterLogger&#125;],</div><div class="line">[&#123; provide: Logger, useExisting: BetterLogger&#125;]</div></pre></td></tr></table></figure>
+<p>看到了吗,我们使用<code>useExisting</code>而不是<code>useClass</code>;因为使用<code>useClass</code>或导致我们的应用中出现两个<code>BetterLogger</code>类的实例.我们可以试验一下,在<code>AppComponent</code>中:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    <span class="comment">//template: '&lt;h1&gt;My First Angular2 Travel&lt;/h1&gt;',</span></div><div class="line">    templateUrl: <span class="string">'app/templates/app.html'</span>,</div><div class="line">    providers: [</div><div class="line">        <span class="comment">//Logger,</span></div><div class="line">        <span class="comment">//[&#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        [LoggerHelper, &#123;provide: BetterLogger, useClass: BetterLogger&#125;],</div><div class="line">        [LoggerHelper, &#123;provide: Logger, useExisting: BetterLogger&#125;],</div><div class="line">        UserService</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>然后我们在<code>BetterLogger</code>类的构造函数中添加一个打印语句:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.warn(<span class="string">'BetterLogger Constructor'</span>);</div></pre></td></tr></table></figure>
+<p>我们还要在<code>UserService</code>类的构造函数中声明一个属性<code>betterLogger</code>,它是<code>BetterLogger</code>类的一个实例:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(private logger: Logger, private betterLogger: BetterLogger) &#123;</div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>最后我们可以看到控制台的打印结果是:</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Just a logger helper!</div><div class="line">BetterLogger <span class="function"><span class="keyword">Constructor</span></span></div><div class="line"><span class="title">From</span> <span class="title">better</span> <span class="title">logger</span> <span class="title">class</span>: get users</div></pre></td></tr></table></figure>
+<p>但是一旦我们使用了<code>useClass</code>而不是<code>useExisting</code>,那么控制台的打印结果就变成了:</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Just a logger helper!</div><div class="line">BetterLogger Constructor</div><div class="line">BetterLogger Constructor</div><div class="line">From better logger <span class="keyword">class</span>: <span class="keyword">get</span> users</div></pre></td></tr></table></figure>
+<p>说明我们创建了两个<code>BetterLogger</code>的实例.所以当我们的多个服务想使用同一个提供商的时候,我们应该使用<code>useExisting</code>,而不是<code>useClass</code>.</p>
+<p>[<strong>2016-8-20:续写</strong>]</p>
+<p><strong>值提供商</strong>:我们可以使用更简便的方法来注册一个提供商,那就是使用<code>值</code>,所谓的值可以是任何一种有效的<code>TypeScript</code>的基本的数据类型.我们来首先使用一个<code>对象</code>吧.首先我们新创建一个文件<code>logger.value.ts</code>,路径是<code>app/values/logger.value.ts</code>;我们写一个基本的<code>loggerValue</code>对象如下:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> loggerValue = &#123;</div><div class="line">    logs: [<span class="string">'Hello'</span>, <span class="string">'World'</span>],</div><div class="line">    log: (msg) =&gt; &#123;</div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">'From values: '</span> + msg);</div><div class="line">    &#125;,</div><div class="line">    hello: () =&gt; &#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'Just say hello!'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;loggerValue&#125;;</div></pre></td></tr></table></figure></p>
+<p>那我们如何注册这个提供商呢?我们使用<code>useValue</code>选项来注册我们这种提供商;如下所示:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">providers: [</div><div class="line">        <span class="comment">//Logger,</span></div><div class="line">        <span class="comment">//[&#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        [LoggerHelper, &#123;provide: BetterLogger, useClass: BetterLogger&#125;],</div><div class="line">        <span class="comment">//[LoggerHelper, &#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        &#123;provide: Logger, useValue: loggerValue&#125;,</div><div class="line">        <span class="comment">//&#123;provide: Logger, useValue: loggerValue1&#125;, // 我们使用了useValue选项</span></div><div class="line">        UserService</div><div class="line">    ]</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>还要记住把<code>loggerValue</code>导入进来;然后我们稍微修改一下<code>user.service.ts</code>的代码:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">getUsers() &#123;</div><div class="line">        <span class="keyword">this</span>.logger.log(<span class="string">'get users'</span>);</div><div class="line">        <span class="comment">//noinspection TypeScriptUnresolvedFunction</span></div><div class="line">        <span class="keyword">this</span>.logger.hello();</div><div class="line">        <span class="keyword">return</span> Users;</div><div class="line">    &#125;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>然后我们会看到控制台的输出是:<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">From</span> values: get users</div><div class="line">Just <span class="built_in">say</span> hello!</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>表明我们这种方式注册提供商成功了. 当然我们也可以使用一个字符串了,这些读者可以自行尝试;或者观看<a href="https://github.com/hacking-with-angular/angular2-travel/tree/basics-demo-di-test-1" target="_blank" rel="external">这个</a>示例.</p>
+<p><strong>工厂提供商</strong>:有时我们需要动态创建这个依赖值,因为它所需要的信息我们直到最后一刻才能确定;我们如何注册一个工厂提供商呢?不着急,我们一步一步来:我们首先来创建一个验证权限的文件,<code>authorize.ts</code>,路径是:<code>app/services/authorize.ts</code>,我们暂且在里面放置一些简单的逻辑,来判定当前用户有没有获取<code>Users</code>的权限:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> Authorize &#123;</div><div class="line">    isAuthorized: <span class="built_in">boolean</span>;</div><div class="line">    <span class="keyword">constructor</span>()&#123;</div><div class="line">        <span class="keyword">this</span>.isAuthorized = <span class="built_in">Math</span>.random() &gt; <span class="number">0.5</span> ? <span class="literal">true</span>: <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    getIsAuthorized() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.isAuthorized;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>好吧,我承认这样写有点随意,暂时先这样吧;我们的目的是为了告诉大家如何使用工厂提供商,暂时简化权限验证这一块;从上面的代码我们可以大概了解到,这个服务就是为了获取当前用户的权限情况;然后我们来配置我们的<code>UserService2Provider</code>,为了方便我们暂时直接在<code>app.component.ts</code>中书写我们的配置:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">let</span> UserService2Provider = (logger: Logger, authorize: Authorize) =&gt; &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> UserService2(logger, authorize.getIsAuthorized());</div><div class="line">&#125;;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>可以看到,我们的<code>UserService2Provider</code>其实就是一个返回了类的实例的一个函数;我们给这个函数传递了两个参数,分别是<code>Logger</code>和<code>Authorize</code>类的实例,然后我们根据这两个实例,创建出了我们新的服务实例;奥,忘了告诉大家,我们还要创建一个新的<code>UserService2</code>类,路径:<code>app/services/user-service2.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;Users&#125; from <span class="string">"../mock/user-data.mock"</span>;</div><div class="line"><span class="keyword">import</span> &#123;Logger&#125; from <span class="string">"./logger.service"</span>;</div><div class="line"></div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> UserService2 &#123;</div><div class="line">    isAuthorized: <span class="built_in">boolean</span>;</div><div class="line">    <span class="keyword">constructor</span>(private logger: Logger, isAuthorized: boolean) &#123;</div><div class="line">        <span class="keyword">this</span>.isAuthorized = isAuthorized;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getUsers() &#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.isAuthorized)&#123;</div><div class="line">            <span class="keyword">this</span>.logger.log(<span class="string">'get users'</span>);</div><div class="line">            <span class="keyword">return</span> Users;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">this</span>.logger.log(<span class="string">'not isAuthorized!'</span>);</div><div class="line">            <span class="keyword">return</span> [];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>可以看到这个服务类和<code>UserService</code>差不多,就是多了一个条件验证,如果当前用户有获取<code>Users</code>的权限,我们就会返回这些<code>Users</code>;如果没有,我们就返回一个空数组.接下来就是很重要的一步了,我们需要在<code>app.component.ts</code>的<code>providers</code>中使用<code>UserService2Provider</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">providers: [</div><div class="line">        <span class="comment">//Logger,</span></div><div class="line">        <span class="comment">//[&#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        [LoggerHelper, &#123;provide: BetterLogger, useClass: BetterLogger&#125;],</div><div class="line">        <span class="comment">//[LoggerHelper, &#123;provide: Logger, useClass: BetterLogger&#125;],</span></div><div class="line">        &#123;provide: Logger, useValue: loggerValue&#125;,</div><div class="line">        <span class="comment">//&#123;provide: Logger, useValue: loggerValue1&#125;,</span></div><div class="line">        UserService,</div><div class="line">        Authorize, <span class="comment">// 不可缺少</span></div><div class="line">        &#123;</div><div class="line">            provide: UserService2,</div><div class="line">            useFactory: UserService2Provider,</div><div class="line">            deps: [Logger, Authorize]</div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>还要记住,要添加<code>Authorize</code>依赖;我们在<code>app.component.ts</code>中使用新的服务:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    users: User[];</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(private userService: UserService, private userService2: UserService2) &#123;</div><div class="line">        <span class="keyword">this</span>.users = userService.getUsers();</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.userService2.getUsers());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>刷新浏览器,你会看到有时它会输出:<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">From</span> values: not isAuthorized!</div><div class="line">[]</div></pre></td></tr></table></figure></p>
+<p>有时它会输出:<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">From</span> values: get users</div><div class="line">[<span class="keyword">User</span>, <span class="keyword">User</span>, <span class="keyword">User</span>, <span class="keyword">User</span>, <span class="keyword">User</span>, <span class="keyword">User</span>]</div></pre></td></tr></table></figure></p>
+<p>那么说明,我们这种方式注册<code>工厂提供商</code>的方式也成功了.</p>
+<p>也许大家会有一些疑问,我们在类的构造函数中使用<code>private userService2: UserService2</code>怎么就获取了这个服务的一个示例,<code>Angular2</code>是怎么知道我们要的是<code>UserService2</code>类,它又是如何获取这个类的实例的呢?在<code>Angular2</code>中我们通过注射器来进行依赖注入,其实上面的形式只是一种简写;详细一点的写法是这样的:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component, Injector&#125; from <span class="string">'@angular/core'</span>;</div></pre></td></tr></table></figure></p>
+<p>我们先从<code>Ng2</code>中获取<code>Injector</code>注射器,然后使用这个注射器来进行我们所需服务的实例化:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    users: User[];</div><div class="line">    <span class="keyword">private</span> userService2: UserService2;</div><div class="line">    </div><div class="line">    <span class="comment">//constructor(private userService: UserService, private userService2: UserService2) &#123;</span></div><div class="line">    <span class="comment">//    this.users = userService.getUsers();</span></div><div class="line">    <span class="comment">//</span></div><div class="line">    <span class="comment">//    console.log(this.userService2.getUsers());</span></div><div class="line">    <span class="comment">//&#125;</span></div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(private userService: UserService, private injector: Injector) &#123;</div><div class="line">        <span class="keyword">this</span>.users = userService.getUsers();</div><div class="line">        <span class="keyword">this</span>.userService2 = <span class="keyword">this</span>.injector.get(UserService2);</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.userService2.getUsers());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>所以可以看出来,这些繁琐的活我们全部都让<code>injector</code>去做了,只需要我们提供一些简单的说明,聪明的<code>Ng2</code>就知道如何进行依赖注入.</p>
+<h4 id="非类依赖"><a href="#非类依赖" class="headerlink" title="非类依赖"></a>非类依赖</h4><p>我们上面的讲解全部都是把一个类作为一个依赖来进行服务的依赖注入,但是假如我们想要的不是一个类,而是一些值,或者对象;我们应该怎么办?我们先来写出这么一个文件<code>app-config.ts</code>,路径是:<code>app/config/app-config.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">interface</span> AppConfig &#123;</div><div class="line">    title: <span class="built_in">string</span>,</div><div class="line">    apiEndPoint: <span class="built_in">string</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> AppConf: AppConfig = &#123;</div><div class="line">    title: <span class="string">'Dreamapple'</span>,</div><div class="line">    apiEndPoint: <span class="string">'https://hacking-with-angular.github.io/'</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>按照上面的使用<code>值</code>的方法,我们应该可以这样做:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line">&#123;provide: AppConfig, useValue: AppConf&#125;</div><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">constructor</span>(private userService: UserService, private userService2: UserService2, private appConf: AppConfig) &#123;</div><div class="line">        <span class="keyword">this</span>.users = userService.getUsers();</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.userService2.getUsers());</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.appConf);</div><div class="line">    &#125;</div><div class="line"><span class="comment">// ...</span></div></pre></td></tr></table></figure></p>
+<p>但是我们这样做却没有达到我们想要的效果;控制台报错:<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Error</span>: ReferenceError: AppConfig <span class="keyword">is</span> <span class="keyword">not</span> defined(…)</div></pre></td></tr></table></figure></p>
+<p>因为接口<code>interface</code>不能够被当做一个类<code>class</code>来处理,所以我们需要换一种新的方式,使用<code>OpaqueToken</code>(不透明的令牌):<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 首先导入 OpaqueToken和Inject</span></div><div class="line"><span class="keyword">import</span> &#123;Component, Injector, OpaqueToken, Inject&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="comment">// 引入AppConf,并且使用OpaqueToken</span></div><div class="line"><span class="keyword">import</span> &#123;AppConf&#125; from <span class="string">"./config/app-config"</span>;</div><div class="line"><span class="keyword">let</span> APP_CONFIG = <span class="keyword">new</span> OpaqueToken(<span class="string">'./config/app-config'</span>);</div><div class="line"><span class="comment">// 在providers中进行配置</span></div><div class="line">&#123;provide: APP_CONFIG, useValue: AppConf&#125;</div><div class="line"><span class="comment">// 在类中使用</span></div><div class="line"><span class="keyword">constructor</span>(private userService: UserService, private userService2: UserService2, @Inject(APP_CONFIG) appConf: AppConfig) &#123;</div><div class="line">        <span class="keyword">this</span>.users = userService.getUsers();</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.userService2.getUsers());</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(appConf);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<p>对上面的代码的一些解释首先我们使用<code>OpaqueTokean</code>对象注册依赖的提供商,然后我们在<code>@Inject</code>的帮助下,我们把这个配置对象注入到需要它的构造函数中,最后我们就可以使用最初的那个对象了.虽然<code>AppConfig</code>接口在依赖注入过程中没有任何作用,但它为该类中的配置对象提供了强类型信息.</p>
+<p>最后我们来讲解一下<code>可选依赖</code>(Optional),有些服务的依赖也许不是必须的;我们就可以使用<code>@Optional()</code>来对这些参数做标记;记住,当使用<code>@Optional()</code>时,如果我们想标记<code>logger</code>这个服务是可选的;那么如果我们不在组件或父级组件中注册一个<code>logger</code>的话,注入器会设置该<code>logger</code>的值为空<code>null</code>;我们的代码必须要为一个空值做准备.来看一下例子吧,我们在<code>user.service.ts</code>中做一些改动:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 导入 Optonal</span></div><div class="line"><span class="keyword">import</span> &#123;Injectable, Optional&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;Users&#125; from <span class="string">"../mock/user-data.mock"</span>;</div><div class="line"><span class="keyword">import</span> &#123;Logger&#125; from <span class="string">"./logger.service"</span>;</div><div class="line"><span class="keyword">import</span> &#123;BetterLogger&#125; from <span class="string">"./better-logger.service"</span>;</div><div class="line"></div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> UserService &#123;</div><div class="line">    <span class="keyword">constructor</span>(private logger: Logger,</div><div class="line">                // 使用@Optional标记</div><div class="line">                @Optional()private betterLogger: BetterLogger) &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getUsers() &#123;</div><div class="line">        <span class="keyword">this</span>.logger.log(<span class="string">'get users'</span>);</div><div class="line">        <span class="comment">//noinspection TypeScriptUnresolvedFunction</span></div><div class="line">        <span class="keyword">this</span>.logger.hello();</div><div class="line"></div><div class="line">        <span class="comment">// 存在betterLogger时的处理</span></div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.betterLogger) &#123;</div><div class="line">            <span class="keyword">this</span>.betterLogger.log(<span class="string">'optional'</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//console.log(this.logger);</span></div><div class="line">        <span class="keyword">return</span> Users;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>至此,整篇文章已经结束了;如果你坚持读到了这里,那说明你也是一个很有耐心的人;如果你有什么问题可以在<a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io/issues" target="_blank" rel="external">这里</a>提出.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- #添加多说评论 -->
+
+
+
+
+
+            </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr/>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                    <li>
+                        <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    <span id="busuanzi_container_site_pv">
+                            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                </p>
+                <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <p class="copyright text-muted">Original Theme <a target="_blank"
+                                                                  href="http://startbootstrap.com/template-overviews/clean-blog/">Clean
+                        Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a
+                            href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>-->
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/bootstrap.min.js"></script>-->
+
+<!-- Gallery -->
+<script src="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
