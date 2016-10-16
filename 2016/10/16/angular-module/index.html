@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="分享你需要的和喜欢的文章">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="iAngular">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Step 7 - NgModule (simple)"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="分享你需要的和喜欢的文章" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="HACKING WITH ANGULAR"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Step 7 - NgModule (simple) - HACKING WITH ANGULAR</title>
+
+    <!-- # add favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <!--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>-->
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/html5shiv.js"></script>-->
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <!-- Gallery -->
+    <link href="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <!--<link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />-->
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">iAngular</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/hacking-with-angular">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/images/angular2-travel/ngmodule.png')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Step 7 - NgModule (simple)</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        Posted by dreamapplehappy on
+                        
+                        2016-10-16
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p id="busuanzi_container_page_pv" style="font-size: 20px; color: #337ab7; text-align: center;">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <span id="busuanzi_value_page_pv"></span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Tags and categories -->
+            
+            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                
+                
+
+
+<a href="/tags/Angular2/">#Angular2</a> <a href="/tags/Travel/">#Travel</a>
+
+
+                
+            </div>
+            <div class="col-lg-4 col-md-5 post-categories">
+                
+            </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>我们今天要学习的是Angular2的模块系统,一般情况下我们使用一个根模块去启动我们的应用,然后使用许多的功能模块去丰富我们的应用,扩展我们应用的功能.这些全部依靠我们的<code>NgModule</code>装饰器,接下来我们就来好好学习一下这个装饰器.当然在这个过程中你会遇到一些新的指令,概念等等;但是别慌,我们会在以后的文章中一个一个的详细讲解呢.</p>
+<p>在开始今天的练习之前,我们首先来熟悉一下<strong><code>NgModule</code></strong>的API,<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">interface</span> NgModule &#123;</div><div class="line">    <span class="comment">// providers: 这个选项是一个数组,需要我们列出我们这个模块的一些需要共用的服务</span></div><div class="line">    <span class="comment">//            然后我们就可以在这个模块的各个组件中通过依赖注入使用了.</span></div><div class="line">   providers : Provider[]</div><div class="line">    <span class="comment">// declarations: 数组类型的选项, 用来声明属于这个模块的指令,管道等等.</span></div><div class="line">    <span class="comment">//               然后我们就可以在这个模块中使用它们了.</span></div><div class="line">   declarations : <span class="built_in">Array</span>&lt;Type&lt;<span class="built_in">any</span>&gt;|<span class="built_in">any</span>[]&gt;</div><div class="line">    <span class="comment">// imports: 数组类型的选项,我们的模块需要依赖的一些其他的模块,这样做的目的使我们这个模块</span></div><div class="line">    <span class="comment">//          可以直接使用别的模块提供的一些指令,组件等等.</span></div><div class="line">   imports : <span class="built_in">Array</span>&lt;Type&lt;<span class="built_in">any</span>&gt;|ModuleWithProviders|<span class="built_in">any</span>[]&gt;</div><div class="line">    <span class="comment">// exports: 数组类型的选项,我们这个模块需要导出的一些组件,指令,模块等;</span></div><div class="line">    <span class="comment">//          如果别的模块导入了我们这个模块,</span></div><div class="line">    <span class="comment">//          那么别的模块就可以直接使用我们在这里导出的组件,指令模块等.</span></div><div class="line">   exports : <span class="built_in">Array</span>&lt;Type&lt;<span class="built_in">any</span>&gt;|<span class="built_in">any</span>[]&gt;</div><div class="line">   <span class="comment">// entryComponents: 数组类型的选项,指定一系列的组件,这些组件将会在这个模块定义的时候进行编译</span></div><div class="line">   <span class="comment">//                  Angular会为每一个组件创建一个ComponentFactory然后把它存储在ComponentFactoryResolver</span></div><div class="line">   entryComponents : <span class="built_in">Array</span>&lt;Type&lt;<span class="built_in">any</span>&gt;|<span class="built_in">any</span>[]&gt;</div><div class="line">   <span class="comment">// bootstrap: 数组类型选项, 指定了这个模块启动的时候应该启动的组件.当然这些组件会被自动的加入到entryComponents中去</span></div><div class="line">   bootstrap : <span class="built_in">Array</span>&lt;Type&lt;<span class="built_in">any</span>&gt;|<span class="built_in">any</span>[]&gt;</div><div class="line">   <span class="comment">// schemas: 不属于Angular的组件或者指令的元素或者属性都需要在这里进行声明.</span></div><div class="line">   schemas : <span class="built_in">Array</span>&lt;SchemaMetadata|<span class="built_in">any</span>[]&gt;</div><div class="line">   <span class="comment">// id: 字符串类型的选项,模块的隐藏ID,它可以是一个名字或者一个路径;用来在getModuleFactory区别模块,如果这个属性是undefined</span></div><div class="line">   <span class="comment">//     那么这个模块将不会被注册.</span></div><div class="line">   id : <span class="built_in">string</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>那么,接下来让我们先来尝试一个简单的例子;现在官网的<a href="https://angular.io/docs/ts/latest/quickstart.html" target="_blank" rel="external"><code>quickstart</code></a>就是一个使用<code>NgModule</code>的例子,所以我们先按照官网的quickstart来走一遍;如果你翻墙很困难的话可以看看这里<a href="https://angular.cn/docs/ts/latest/quickstart.html" target="_blank" rel="external">中文版的quickstart</a>,或者看看我按照官网做的一个例子<a href="https://github.com/hacking-with-angular/angular2-travel/tree/10-15-quickstart" target="_blank" rel="external">angular2-travel</a>.</p>
+<p>我们首先来看一下这个最简单的版本的代码吧,首先是<code>app.component.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; from <span class="string">'@angular/core'</span>;</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    templateUrl: <span class="string">'app/templates/app.template.html'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>这个就比较简单了,使用<code>@Component</code>装饰器来定义我们的<code>AppComponent</code>组件.重点是<code>app.module.ts</code>中的代码:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"><span class="keyword">import</span> &#123; AppComponent &#125;   from <span class="string">'./app.component'</span>;</div><div class="line">@NgModule(&#123;</div><div class="line">    imports:      [ BrowserModule ],</div><div class="line">    declarations: [ AppComponent ],</div><div class="line">    bootstrap:    [ AppComponent ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>首先导入<code>NgModule</code>和<code>BrowserModule</code>以及<code>AppComponent</code>;NgModule是我们组织Angular应用所必须的,导入<code>BrowserModule</code>是因为它提供了启动和运行浏览器应用的那些基本的服务提供商.如果你想深入了解可以看看这里<a href="https://angular.cn/docs/ts/latest/cookbook/ngmodule-faq.html#!#q-browser-vs-common-module" target="_blank" rel="external"><em>我应该导入 BrowserModule 还是 CommonModule</em></a>,之后的AppComponent是我们要展现的一个最基本的组件.然后我们在<code>@NgModule</code>的元数据中配置我们导入的模块,因为我们需要依赖<code>BrowserModule</code><br>所以我们在<code>imports</code>中添加了它,然后我们又在<code>declarations</code>和<code>bootstrap</code>选项中添加了<code>AppComponent</code>组件.</p>
+<p>当然我们还需要使用<code>main.ts</code>中的代码来启动我们整个程序:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; platformBrowserDynamic &#125; from <span class="string">'@angular/platform-browser-dynamic'</span>;</div><div class="line"><span class="keyword">import</span> &#123; AppModule &#125; from <span class="string">'./app.module'</span>;</div><div class="line"><span class="keyword">const</span> platform = platformBrowserDynamic();</div><div class="line">platform.bootstrapModule(AppModule);</div></pre></td></tr></table></figure></p>
+<p>我们这里使用的是<strong>通过即时JIT编译器动态引导</strong>的方式来运行我们的代码;当然还有另一种方式,那就是<strong>使用预编译器（ AoT - Ahead-Of-Time ）进行静态引导.</strong>静态方案可以生成更小,启动更快的应用,建议优先使用它,特别是在移动设备或高延迟网络下.这里我们就不详细介绍这两种方式了,在以后的文章中我们会详细的介绍这两种方式的区别.<br>在这里我们先使用第一种方式,我们本篇文章的主要目的是教会大家如何使用<code>NgModule</code>.</p>
+<p>在<code>main.ts</code>中启动的模块一般是我们的根模块,现在我们要来丰富一下我们这个根模块了.首先我们先来添加一个小组件吧,一般情况下我们的WEB应用都会有一个随着页面内容进行变化的标题,那么我们就来先写这样一个组件吧:文件路径:<code>app/components/title/title.component.ts</code>,代码如下:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component&#125; from <span class="string">'@angular/core'</span>;</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'app-title'</span>,</div><div class="line">    templateUrl: <span class="string">'app/components/title/title.template.html'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> TitleComponent &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>我们定义了一个组件,然后它的选择器是<code>app-title</code>,组件的模板是:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>应用的标题: Dreamapple<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后我们把这个组件添加到我们的根模板里面吧:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Angular App<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">app-title</span>&gt;</span><span class="tag">&lt;/<span class="name">app-title</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后你会发现,我们的应用报错了:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">zone.js:355 Unhandled Promise rejection: Template parse errors:</div><div class="line"><span class="string">'app-title'</span> is not a known element:</div><div class="line">1. If <span class="string">'app-title'</span> is an Angular component, <span class="keyword">then</span> verify that it is part of this module.</div><div class="line">2. If <span class="string">'app-title'</span> is a Web Component <span class="keyword">then</span> add <span class="string">"CUSTOM_ELEMENTS_SCHEMA"</span> to the <span class="string">'@NgModule.schemas'</span> of this component to suppress this message. (<span class="string">"&lt;h1&gt;My First Angular App&lt;/h1&gt;</span></div></pre></td></tr></table></figure></p>
+<p>这是因为我们没有把这个组件加入到我们的根模板里面的<code>declarations</code>选项里面,然后我们把它加入进去:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"><span class="keyword">import</span> &#123; AppComponent &#125;   from <span class="string">'./app.component'</span>;</div><div class="line"><span class="keyword">import</span> &#123;TitleComponent&#125; from <span class="string">"./components/title/title.component"</span>;</div><div class="line">@NgModule(&#123;</div><div class="line">    imports:      [ BrowserModule ],</div><div class="line">    declarations: [</div><div class="line">        AppComponent,</div><div class="line">        TitleComponent <span class="comment">// 声明我们刚刚写的组件</span></div><div class="line">    ],</div><div class="line">    bootstrap:    [ AppComponent ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>如果你觉得我们这个组件有点’死板’的话,我们可以让它变的灵活一点;我们可以动态的给这个组件传值,首先修改<code>title.component.ts</code>,导入<code>Input</code>,然后将组件的输入显示到组件中去:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component, Input&#125; from <span class="string">'@angular/core'</span>;</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'app-title'</span>,</div><div class="line">    templateUrl: <span class="string">'app/components/title/title.template.html'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> TitleComponent &#123;</div><div class="line">    @Input() appTitle = <span class="string">''</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后修改模板:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>应用的标题: &#123;&#123;appTitle&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后修改一下<code>app.component.ts</code>里面的内容:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; from <span class="string">'@angular/core'</span>;</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    templateUrl: <span class="string">'app/templates/app.template.html'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    appTitle = <span class="string">'Hello title'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最后修改<code>app.template.html</code>里面的内容:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Angular App<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">app-title</span> [<span class="attr">appTitle</span>]=<span class="string">"appTitle"</span>&gt;</span><span class="tag">&lt;/<span class="name">app-title</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>然后我们的标题现在就是动态的了,看着还不错吧.</p>
+<p>但是我们这个标题现在还不会变化,我们要想个办法让它能够发生变化;最好的办法就是使用服务,我们来添加一个让标题变起来的服务吧,我们给它起名叫<code>ActiveTitleService</code>吧.文件的路径是<code>app/components/title/active-title.service.ts</code>,代码如下:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Injectable&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Injectable()</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> ActiveTitleService &#123;</div><div class="line">    getTitle() &#123;</div><div class="line">        <span class="keyword">let</span> title = <span class="built_in">Math</span>.random().toFixed(<span class="number">2</span>) + <span class="string">'title'</span>;</div><div class="line">        <span class="keyword">return</span> title;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后我们需要在<code>app.module.ts</code>文件中,在<code>@NgModule</code>的元数据中添加<code>providers</code>然后添加这个服务:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"><span class="keyword">import</span> &#123; AppComponent &#125;   from <span class="string">'./app.component'</span>;</div><div class="line"><span class="keyword">import</span> &#123;TitleComponent&#125; from <span class="string">"./components/title/title.component"</span>;</div><div class="line"><span class="keyword">import</span> &#123;ActiveTitleService&#125; from <span class="string">"./components/title/active-title.service"</span>;</div><div class="line">@NgModule(&#123;</div><div class="line">    providers: [</div><div class="line">        ActiveTitleService <span class="comment">// 添加我们刚才的服务</span></div><div class="line">    ],</div><div class="line">    imports:      [ BrowserModule ],</div><div class="line">    declarations: [</div><div class="line">        AppComponent,</div><div class="line">        TitleComponent</div><div class="line">    ],</div><div class="line">    bootstrap:    [ AppComponent ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>最后就是在我们的<code>app.component.ts</code>中使用了:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;ActiveTitleService&#125; from <span class="string">"./components/title/active-title.service"</span>;</div><div class="line">@Component(&#123;</div><div class="line">    selector: <span class="string">'my-app'</span>,</div><div class="line">    templateUrl: <span class="string">'app/templates/app.template.html'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</div><div class="line">    appTitle = <span class="string">'Hello title'</span>;</div><div class="line">    <span class="keyword">constructor</span>(activeTitleService: ActiveTitleService) &#123;</div><div class="line">        <span class="comment">// 使用这个服务</span></div><div class="line">        <span class="keyword">this</span>.appTitle = activeTitleService.getTitle();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>添加完这个服务之后,每次我们刷新页面,就会发现我们的<code>appTitle</code>就会随之发生变化.这样下来我们的这个应用就变得很好玩了.然后我想通过指令给我的这个组件添加一些样式,让它变得好看一点.</p>
+<p>我们再写这样一个指令,就叫它<code>hightlight</code>吧,文件的路径是:<code>app/components/title/highlight.directive.ts</code>,接下来我们会接触到一些新的内容;但是别紧张,这些内容在后面的章节中我们会详细的讲解的,现在我们需要做的就是先学习如何使用,然后达到我们想要的效果就好了.<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Directive, ElementRef, Renderer&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line">@Directive(&#123;</div><div class="line">    selector: <span class="string">'[highlight]'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HighlightDirective &#123;</div><div class="line">    <span class="keyword">constructor</span>(renderer: Renderer, el: ElementRef) &#123;</div><div class="line">        renderer.setElementStyle(el.nativeElement, <span class="string">'backgroundColor'</span>, <span class="string">'red'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们可以大概的了解一下上面指令的作用,首先我们导入<code>Directive</code>这个装饰器,用来表示我们下面的那个类是一个指令的类,然后我们导入了<code>ElementRef</code>和<code>Renderer</code>用来进行操作我们的元素.好,接下来我们就要使用这个指令了,首先我们还是要在<code>app.module.ts</code>中声明这个指令,然后才可以在我们的<code>title.template.html</code>中使用:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">declarations: [</div><div class="line">        AppComponent,</div><div class="line">        TitleComponent,</div><div class="line">        HighlightDirective</div><div class="line">    ],</div><div class="line">...</div></pre></td></tr></table></figure></p>
+<p>然后我们在模板中使用:<br><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">p</span> <span class="attr">highlight</span>&gt;</span>应用的标题: </span><span class="template-variable">&#123;&#123;appTitle&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<p>上面的内容都是关于在一个模块中如何使用<code>服务</code>,<code>指令</code>,<code>组件</code>的;下面我们要写我们的第二个模块,主要研究一下在别的模块中如何使用<code>服务</code>,<code>指令</code>,<code>组件</code>以及模块之间如何共用组件指令等.</p>
+<p>我们的第二个模块就是一个简单的列表,展示一些模拟的用户信息;首先我们创建我们的<code>UserModule</code>,因为文件比较多,我就不再一一列举了,如果你有兴趣的话可以在github上面看一下关于这篇文章的具体代码<a href="https://github.com/hacking-with-angular/angular2-travel/tree/10-15-copy" target="_blank" rel="external">angular2-travel</a>.</p>
+<p>下面是<code>UserModule</code>的一些结构,我下面简单的讲解一下一些主要的部分:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── app</div><div class="line">    ├── modules </div><div class="line">        ├── user.module.ts  <span class="comment"># 用户模块</span></div><div class="line">    ├── components </div><div class="line">        ├── user-list       <span class="comment"># 用户列表模块</span></div><div class="line">            ├── user.class.ts   <span class="comment"># 用户类用来创建用户实例</span></div><div class="line">            ├── user-highlight.directive.ts <span class="comment"># 指令</span></div><div class="line">            ├── user-list.component.ts  <span class="comment"># 用列表组件</span></div><div class="line">            ├── user-list.services.ts   <span class="comment"># 获取用户列表的服务</span></div><div class="line">            ├── user-list.template.html <span class="comment"># 用户列表的模板</span></div><div class="line">├── ..</div></pre></td></tr></table></figure></p>
+<p>首先是<code>user.module.ts</code>这个文件:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;NgModule&#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;CommonModule&#125; from <span class="string">"@angular/common"</span>;</div><div class="line"><span class="keyword">import</span> &#123;FormsModule&#125; from <span class="string">"@angular/forms"</span>;</div><div class="line"><span class="keyword">import</span> &#123;UserListComponent&#125; from <span class="string">"../components/user-list/user-list.component"</span>;</div><div class="line"><span class="keyword">import</span> &#123;UserListService&#125; from <span class="string">"../components/user-list/user-list.service"</span>;</div><div class="line"><span class="keyword">import</span> &#123;HighlightDirective&#125; from <span class="string">"../components/user-list/user-highlight.directive"</span>;</div><div class="line"></div><div class="line">@NgModule(&#123;</div><div class="line">    providers: [</div><div class="line">        UserListService</div><div class="line">    ],</div><div class="line">    imports: [</div><div class="line">        CommonModule,</div><div class="line">        FormsModule</div><div class="line">    ],</div><div class="line">    declarations: [</div><div class="line">        UserListComponent,</div><div class="line">        HighlightDirective</div><div class="line">    ],</div><div class="line">    exports: [</div><div class="line">        CommonModule,</div><div class="line">        FormsModule,</div><div class="line">        UserListComponent</div><div class="line">    ]</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> UserModule &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>我们重新定义了一个功能模块,导入了我们需要的服务<code>UserListService</code>,我们需要的模块<code>CommonModule</code>和<code>FormsModules</code>;然后声明了在这个模块可以使用的组件<code>UserListComponent</code>和指令<code>HighlightDirective</code>,最后我们导出了一些模块和组件,<br>供其它的模块调用.然后我们就可以直接在我们的根模块中使用<code>UserListComponent</code>了,别忘了修改<code>app.module.ts</code>和<code>app.template.html</code>;它们的修改如下;</p>
+<p>首先是<code>app.module.ts</code>:<br><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; from <span class="string">'@angular/platform-browser'</span>;</div><div class="line"><span class="keyword">import</span> &#123; AppComponent &#125;   from <span class="string">'./app.component'</span>;</div><div class="line"><span class="keyword">import</span> &#123;TitleComponent&#125; from <span class="string">"./components/title/title.component"</span>;</div><div class="line"><span class="keyword">import</span> &#123;ActiveTitleService&#125; from <span class="string">"./components/title/active-title.service"</span>;</div><div class="line"><span class="keyword">import</span> &#123;HighlightDirective&#125; from <span class="string">"./components/title/highlight.directive"</span>;</div><div class="line"><span class="keyword">import</span> &#123;UserModule&#125; from <span class="string">"./modules/user.module"</span>;</div><div class="line">@NgModule(&#123;</div><div class="line">    providers: [</div><div class="line">        ActiveTitleService</div><div class="line">    ],</div><div class="line">    imports:      [</div><div class="line">        BrowserModule,</div><div class="line">        UserModule <span class="comment">// 添加我们需要的UserModule模块</span></div><div class="line">    ],</div><div class="line">    declarations: [</div><div class="line">        AppComponent,</div><div class="line">        TitleComponent,</div><div class="line">        HighlightDirective</div><div class="line">    ],</div><div class="line">    bootstrap:    [ AppComponent ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123; &#125;</div></pre></td></tr></table></figure></p>
+<p>然后是<code>app.template,html</code>:<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>My First Angular App<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">app-title</span> [<span class="attr">appTitle</span>]=<span class="string">"appTitle"</span>&gt;</span><span class="tag">&lt;/<span class="name">app-title</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 可以直接使用UserListComponent --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">user-list</span>&gt;</span><span class="tag">&lt;/<span class="name">user-list</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>到这里,我想你已经大概了解了如何使用<code>NgModule</code>,如果你想详细了解一下关于这部分的内容,你可以看看这里<a href="https://angular.cn/docs/ts/latest/guide/ngmodule.html" target="_blank" rel="external"><em>ANGULAR模块（NGMODULE）</em></a>;我们这篇文章只是简单地介绍了一下,作为入门吧.</p>
+<p>最后,有什么问题你都可以在<a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io/issues" target="_blank" rel="external">这里</a>提出来,或者在下面留言;当然欢迎star这个项目<a href="https://github.com/hacking-with-angular/angular2-travel" target="_blank" rel="external">angular2-travel</a>,我们更希望您能加入进来,为这个项目出一份力,让更多的人可以更好地学习使用<strong>Angular2</strong></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- #添加多说评论 -->
+
+<!--https://hacking-with-angular.github.io/2016/10/16/angular-module/:angular-module:Step 7 - NgModule (simple)-->
+<section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="angular-module" data-title="Step 7 - NgModule (simple)" data-url="https://hacking-with-angular.github.io/2016/10/16/angular-module/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:'hacking-with-angular'};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+
+
+            </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr/>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                    <li>
+                        <a href="https://github.com/hacking-with-angular/hacking-with-angular.github.io" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    <span id="busuanzi_container_site_pv">
+                            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                </p>
+                <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <p class="copyright text-muted">Original Theme <a target="_blank"
+                                                                  href="http://startbootstrap.com/template-overviews/clean-blog/">Clean
+                        Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a
+                            href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>
+<!--<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/jquery-2.1.4.min.js"></script>-->
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/bootstrap.min.js"></script>-->
+
+<!-- Gallery -->
+<script src="https://cdn.rawgit.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<script src="https://raw.githubusercontent.com/dreamapplehappy/hacking-with-angular-blog/master/source/lib/featherlight.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
